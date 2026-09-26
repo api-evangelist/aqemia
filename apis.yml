@@ -1,23 +1,68 @@
 aid: aqemia
+
 name: AQEMIA
-description: 'AQEMIA is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://aqemia.com/img/opengraph-image.png
+
+description: 'AQEMIA is a physics‑based AI drug discovery company that leverages generative AI and deep physics to accelerate the creation of new medicines. Based in Paris and London, the firm offers a platform that integrates advanced computational models, high‑throughput simulations, and data‑driven pipelines to discover and optimize therapeutic candidates at scale. Their mission is to reinvent drug discovery by combining cutting‑edge science with AI to reduce time and cost, aiming to bring innovative treatments to patients faster.'
+
 url: https://raw.githubusercontent.com/api-evangelist/aqemia/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
 - Company
-apis: []
+- AI
+- DrugDiscovery
+- Biotechnology
+- Platform
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/aqemia-hosts.yml
+- type: Vendors
+  url: vendors/aqemia-vendors.yml
+- type: TermsOfService
+  url: https://aqemia.com/terms-of-use
+- type: Newsroom
+  url: https://aqemia.com/news
+- type: GitHubOrganization
+  url: https://github.com/Aqemia
+- type: DomainSecurity
+  url: security/aqemia-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/aqemia_stock/
+  url: https://aqemia.com/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: No API developer program or public API documentation was found for AQEMIA.
+  evidence:
+    - url: https://api.aqemia.com/openapi.json
+      status: DNS_ERROR
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
